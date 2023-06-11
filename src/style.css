@@ -20,9 +20,41 @@ div {
 /* Header Styles */
 .header {
     font-size: 40px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
 }
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    transition: transform .5s ease-in-out;
+}
+
+#logo:hover {
+    transform: rotate(360deg);
+}
+
+/* Body Styles */
 
 .content {
     flex: 5 1 0;
+    overflow: hidden;
+    overflow-y: scroll; /* Makes content scrollable */
+    -ms-overflow-style: none; /* hides scroll bar */
+    scrollbar-width: none; /* hides scroll bar */
 }
+
+.content::-webkit-scrollbar {
+    display: none; /* hides scroll bar */
+}
+
+

@@ -1,8 +1,7 @@
 import './style.css';
+import {addHomeContent, addHomeTabName} from './home';
+
+const content = document.querySelector(".content");
 
 
-// const contentWrapper = document.createElement("div");
-
-// contentWrapper.innerHTML="hello"
-
-// document.body.appendChild(contentWrapper);
+addHomeTabName();
