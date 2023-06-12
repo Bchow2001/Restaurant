@@ -1,7 +1,8 @@
 import './style.css';
-import {addHomeContent, addHomeTabName} from './home';
-
-const content = document.querySelector(".content");
+import {generateAboutUs} from './home'
 
 
-addHomeTabName();
+
+const aboutUsBtn = document.querySelector("#about-us");
+
+aboutUsBtn.addEventListener("click", generateAboutUs);
