@@ -1,5 +1,7 @@
 const contentDiv = document.querySelector(".content-div");
 
+
+
 const generateDiv = (divName) => {
     const div = document.createElement("div");
     div.classList.add(divName);
@@ -18,13 +20,15 @@ const generateContactUs = () => {
 
     contentDiv.appendChild(generateHeader);
 
+    const contactDetailsDiv = generateDiv("contact-details-wrapper");
+
     // Function to generate contact details
     const generateContactItems = (name, position, telephone, email, img) => {
-        const contactItem = generateDiv("content-body");
-        const contactName = generateDiv("signature");
-        const contactPosition = generateDiv("content-text");
-        const contactTelephone = generateDiv("content-text");
-        const contactEmail= generateDiv("content-text");
+        const contactItem = generateDiv("contact-item");
+        const contactName = generateDiv("contact-signature");
+        const contactPosition = generateDiv("contact-content-text");
+        const contactTelephone = generateDiv("contact-content-text");
+        const contactEmail= generateDiv("contact-content-text");
         const contactImg = generateDiv(img);
 
         contactName.innerText = name;
@@ -32,13 +36,14 @@ const generateContactUs = () => {
         contactTelephone.innerText = telephone;
         contactEmail.innerText = email;
 
+        contactItem.append(contactImg);
         contactItem.append(contactName);
         contactItem.append(contactPosition);
         contactItem.append(contactTelephone);
         contactItem.append(contactEmail);
-        contactItem.append(contactImg);
+        
 
-        contentDiv.appendChild(contactItem);
+        contactDetailsDiv.appendChild(contactItem);
     };
 
     const contactArray = [
@@ -68,6 +73,8 @@ const generateContactUs = () => {
     contactArray.forEach((item) => {
         generateContactItems(...item);
     });
+
+    contentDiv.appendChild(contactDetailsDiv);
 };
 
 export {generateContactUs};

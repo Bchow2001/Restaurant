@@ -22,7 +22,7 @@ const generateAboutUs = () => {
         const divOne = generateDiv("content-body");
         const signature = generateDiv("signature");
         const storyDiv = generateDiv("content-text");
-        storyDiv.innerText = "Our story began in the mind of L'Buiert in 2023, where he dreamed of a restaurant that can offer you Liberty, Freedom, Happiness and so much more. So welcome to Liberty Inc. Restaurant, where culinary innovation confronts the crushing monotony of reality. Under the guidance of our visionary head chef, L'Buiert, we strive to break free from the monotonous chains of your daily lives and serve up a truly revolutionary dining experience. True happiness comes from consuming our exquisite dishes, so why wait when you can have it all now ...";
+        storyDiv.innerText = "Our story began in the mind of L. Tine in 2023, where he dreamed of a restaurant that can offer you Liberty, Freedom, Happiness and so much more. So welcome to Liberty Inc. Restaurant, where culinary innovation confronts the crushing monotony of reality. Under the guidance of our visionary head chef, L'Buiert, we strive to break free from the monotonous chains of your daily lives and serve up a truly revolutionary dining experience. True happiness comes from consuming our exquisite dishes, so why wait when you can have it all now ...";
         signature.innerText = "L. Tine";
         divOne.appendChild(storyDiv);
         divOne.appendChild(signature);

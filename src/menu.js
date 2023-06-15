@@ -6,6 +6,8 @@ const generateDiv = (divName) => {
     return div;
 };
 
+
+
 const generateMenu = () => {
     contentDiv.innerHTML = "";
 
@@ -24,7 +26,7 @@ const generateMenu = () => {
         const menuItem = generateDiv("content-body")
         const menuName = generateDiv("content-subheader");
         const descriptionText = generateDiv("content-text");
-        const priceText = generateDiv("content-price");
+        const priceText = generateDiv("price");
         const menuImg = generateDiv(img);
 
         menuName.innerText = name;
